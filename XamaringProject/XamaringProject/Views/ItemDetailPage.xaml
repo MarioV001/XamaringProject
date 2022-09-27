@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamaringProject.Views.ItemDetailPage"
+             Title="{Binding Title}">
+
+    <StackLayout Spacing="20" Padding="0">
+        <StackLayout Padding="15" Spacing="10">
+
+
+        <Label Text="{Binding CustomerName, StringFormat='Name: {0}'}" FontSize="22" />
+        <Label Text="{Binding ProductID, StringFormat='Product ID: {0}'}" FontSize="14" />
+        <Label Text="{Binding ProductPrice, StringFormat='Price: {0}'}"  FontSize="14"/>
+        </StackLayout>
+        <StackLayout HeightRequest="5" BackgroundColor="#F06F6F"></StackLayout>
+        <Button Margin="0,0,0,0" Text="DELETE ENTRY"
+                        Command="{Binding RemoveCommand}"
+                        BackgroundColor="{StaticResource PrimaryRED}"
+                        TextColor="White" />
+    </StackLayout>
+    
+</ContentPage>
